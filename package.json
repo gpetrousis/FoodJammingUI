@@ -1,0 +1,38 @@
+{
+  "name": "foodjamming-ui",
+  "version": "1.0.0",
+  "description": "UI library using Storybook for a blog",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpetrousis/FoodJammingUI.git"
+  },
+  "keywords": [
+    "Design",
+    "System",
+    "node",
+    "module",
+    "ui",
+    "library",
+    "blog"
+  ],
+  "author": "Georgios Petrousis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gpetrousis/FoodJammingUI/issues"
+  },
+  "homepage": "https://github.com/gpetrousis/FoodJammingUI#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@storybook/react": "^5.0.11",
+    "babel-loader": "^8.0.6"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
