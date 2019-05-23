@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "storybook": "start-storybook",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:css":"stylelint './src/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -29,10 +31,24 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@storybook/react": "^5.0.11",
-    "babel-loader": "^8.0.6"
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.3.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.7.0"
   },
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run lint:css"
+    }
   }
 }
