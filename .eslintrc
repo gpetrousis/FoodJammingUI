@@ -8,12 +8,20 @@
     },
     "env": {
         "es6": true,
-        "node": true
+        "node": true,
+        "browser": true
     },
     "extends": [
+        "airbnb",
         "eslint:recommended",
         "plugin:react/recommended"
     ],
+    "rules": {
+        "arrow-parens": "off",
+        "comma-dangle": "off",
+        "react/prefer-stateless-function": "off",
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    },
     "settings": {
         "react": {
             "version": "detect"
