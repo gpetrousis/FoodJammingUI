@@ -4,7 +4,7 @@ import { Normal } from './Styles'
 import { HeadingLarge, HeadingMedium, HeadingSmall, BodyRegular, BodySmall } from './Sizes'
 
 const Color = css`
-  color: ${props => props.color};
+  color: ${props => props.theme.fontColorMain};
 `;
 
 const BrandTitle = styled.h1`
