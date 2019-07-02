@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { Text } from '../../components/typography/Typography'
+import { Text } from '../../components/typography'
 
 const Item = styled.div`
   display: flex;
@@ -16,19 +16,19 @@ const TextDiv = styled.div`
   justify-content: center;
   width: 50%;
   text-align: left;
-  margin-right: 16px;
 `;
 
 const DescriptionDiv = styled.div`
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 50%;
-  height: 50%;
 `;
 
 class TypographyItem extends Component {
   render() {
     const {
-      item: { Element, name, description, usage }
+      item: { Element, name, description }
      } = this.props;
     return (
       <Item>
@@ -37,7 +37,6 @@ class TypographyItem extends Component {
         </TextDiv>
         <DescriptionDiv>
           <Text>{description}</Text>
-          <Text>{`Usage: ${usage}`}</Text>
         </DescriptionDiv>
       </Item>
     );
