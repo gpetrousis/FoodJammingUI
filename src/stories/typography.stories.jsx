@@ -2,9 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
 import { select, withKnobs } from '@storybook/addon-knobs';
-
-import themes from '../themes';
-
+import { TypographyItem, CodeBlock, ColoredDiv }  from './helperComponents';
 import {
   BrandTitle,
   PageTitle,
@@ -13,11 +11,10 @@ import {
   SubText
 } from '../components/typography';
 
-import TypographyItem from './helpers/TypographyItem';
-import CodeBlock from './helpers/CodeBlock';
+import themes from '../themes';
 
 const typographyItems = [
-  { 
+  {
     Element: BrandTitle,
     name: 'BrandTitle (60/90)',
     description: 'Large heading <h1> for brand titles or page titles (to be used rarely)',
@@ -44,12 +41,6 @@ const typographyItems = [
   }
 ]
 
-//TODO: Add background to themes and to the typography page(or globally in storybook)
-//TODO: Add code block
-//TODO: Fix the duplicate component folders
-//TODO: Add no trailing spaces in linting rules
-//TODO: Decide on commit message format
-
 const typographyUsage = `
   import {
     BrandTitle,
@@ -70,7 +61,7 @@ storiesOf('Typography', module)
   .addDecorator(withKnobs)
   .add('with text', () => (
     <ThemeProvider theme={select('Theme', themes, themes.lightTheme, 'GROUP-ID1')}>
-      <React.Fragment>
+      <ColoredDiv>
         <PageTitle>Typography</PageTitle>
         <SectionTitle>Font: Raleway</SectionTitle>
         <SectionTitle>Usage:</SectionTitle>
@@ -81,6 +72,6 @@ storiesOf('Typography', module)
         {typographyItems.map(style => (
           <TypographyItem key={style.name} item={style} />
         ))}
-      </React.Fragment>
+      </ColoredDiv>
     </ThemeProvider>
   ));

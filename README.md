@@ -2,8 +2,8 @@
 Ui library for the foodjamming blog
 
 # Coding standards
-* eslint pre-commit 
-* (husky)
+* eslint
+* pre-commit (husky)
 
 # Design decisions 
 ## Typography

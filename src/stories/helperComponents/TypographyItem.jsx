@@ -8,7 +8,6 @@ const Item = styled.div`
   display: flex;
   width: 100%;
 `;
-  // margin-bottom: 32px;
 
 const TextDiv = styled.div`
   display: flex;
