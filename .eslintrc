@@ -17,12 +17,14 @@
         "plugin:react/recommended"
     ],
     "rules": {
-        "arrow-parens": "off",
+        "arrow-parens": ["error", "as-needed"],
         "comma-dangle": "off",
         "react/prefer-stateless-function": "off",
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
         "object-curly-spacing": ["error", "always"],
-        "no-trailing-spaces": "error"
+        "no-trailing-spaces": "error",
+        "semi": ["error", "always"],
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }]
     },
     "settings": {
         "react": {

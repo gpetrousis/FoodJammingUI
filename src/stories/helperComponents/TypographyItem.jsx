@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { Text } from '../../components/typography'
+import { Text } from '../../components/typography';
 
 const Item = styled.div`
   display: flex;
