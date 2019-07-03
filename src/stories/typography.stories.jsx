@@ -39,7 +39,7 @@ const typographyItems = [
     name: 'SubText (16/24)',
     description: 'Sub text <p> for secondary text',
   }
-]
+];
 
 const typographyUsage = `
   import {
@@ -55,7 +55,7 @@ const typographyUsage = `
   <SectionTitle>Text</SectionTitle>
   <Text>Text</Text>
   <SubText>Text</SubText>
-`
+`;
 
 storiesOf('Typography', module)
   .addDecorator(withKnobs)

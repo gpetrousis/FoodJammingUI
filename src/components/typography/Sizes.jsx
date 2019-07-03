@@ -4,8 +4,8 @@ const calculateSize = size => {
   return `
     font-size: ${size}px;
     line-height: ${1.5 * size}px;
-  `
-}
+  `;
+};
 
 const HeadingLarge = css`
   ${calculateSize(60)}
@@ -33,4 +33,4 @@ export {
   HeadingSmall,
   BodyRegular,
   BodySmall,
-}
+};
