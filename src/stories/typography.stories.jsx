@@ -17,27 +17,27 @@ const typographyItems = [
   {
     Element: BrandTitle,
     name: 'BrandTitle (60/90)',
-    description: 'Large heading <h1> for brand titles or page titles (to be used rarely)',
+    description: 'Large heading <h1> for brand titles or page titles (to be used rarely)'
   },
   {
     Element: PageTitle,
     name: 'PageTitle (48/72)',
-    description: 'Heading <h2> for page titles',
+    description: 'Heading <h2> for page titles'
   },
   {
     Element: SectionTitle,
     name: 'SectionTitle (32/48)',
-    description: 'Small Heading <h3> for sections and post titles',
+    description: 'Small Heading <h3> for sections and post titles'
   },
   {
     Element: Text,
     name: 'Text (20/30)',
-    description: 'Main text <p> for most of the text',
+    description: 'Main text <p> for most of the text'
   },
   {
     Element: SubText,
     name: 'SubText (16/24)',
-    description: 'Sub text <p> for secondary text',
+    description: 'Sub text <p> for secondary text'
   }
 ];
 
