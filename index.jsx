@@ -1,3 +1,3 @@
 import Components from './src/components';
 
-module.exports = Components;
+export default Components;
