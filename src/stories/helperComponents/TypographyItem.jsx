@@ -47,8 +47,8 @@ TypographyItem.propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
     example: PropTypes.string,
-    element: PropTypes.element
-  }).isRequired,
+    Element: PropTypes.element
+  }).isRequired
 };
 
 export default TypographyItem;

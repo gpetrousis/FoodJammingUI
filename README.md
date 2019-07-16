@@ -76,6 +76,19 @@ Based on those guidelines:
 * Read the changes and think how to improve the code.
 * Reason about every comment you leave.
 
+## Change log
+Based on the instructions from [https://keepachangelog.com/en/1.0.0/]
+* Update the change log with every release bigger than pre-release.
+* Keep the change log in reverse chronological order (latest first).
+* For each release note the date and fill the following sections if applicable:
+  * `Added` for new features.
+  * `Changed` for changes in existing functionality.
+  * `Deprecated` for soon-to-be removed features.
+  * `Removed` for now removed features.
+  * `Fixed` for any bug fixes.
+  * `Security` in case of vulnerabilities.
+* Keep the example template at the top of the file.
+
 # Design decisions 
 ## Typography
 The idea in Typography is to create different components that re-use as much

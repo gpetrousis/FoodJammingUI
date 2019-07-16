@@ -32,5 +32,5 @@ export {
   HeadingMedium,
   HeadingSmall,
   BodyRegular,
-  BodySmall,
+  BodySmall
 };
