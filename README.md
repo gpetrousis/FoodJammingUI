@@ -1,4 +1,9 @@
 # FoodJammingUI
+
+![GitHub package.json version](https://img.shields.io/github/package-json/v/gpetrousis/foodjammingui.svg)
+![GitHub issues](https://img.shields.io/github/issues-raw/gpetrousis/foodjammingui.svg)
+![GitHub](https://img.shields.io/github/license/gpetrousis/foodjammingui.svg)
+
 Ui library for the foodjamming blog
 
 # Coding standards
@@ -71,7 +76,7 @@ Based on those guidelines:
 
 ### As a reviewer:
 * Read the ticket and understand the task/problem/bug.
-* don't be afraid to ask questions.
+* Don't be afraid to ask questions.
 * Checkout the branch and test the changes.
 * Read the changes and think how to improve the code.
 * Reason about every comment you leave.
