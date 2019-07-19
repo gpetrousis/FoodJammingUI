@@ -22,6 +22,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2019-07-19
+### Added
+- Changed dependencies in package.json file.
+### Security
+- Updated node_modules to fix vulnerability issues.
+
 ## [1.1.0] - 2019-07-16
 ### Added
 - Typography components.
