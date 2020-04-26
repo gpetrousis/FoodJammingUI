@@ -1,32 +1,24 @@
 import styled, { css } from 'styled-components';
-import { Normal } from './Styles';
-import { HeadingLarge, HeadingMedium, HeadingSmall, BodyRegular, BodySmall } from './Sizes';
-const Color =
-/*#__PURE__*/
-css(["color:", ";"], props => props.theme.fontColorMain);
-const BrandTitle =
-/*#__PURE__*/
-styled.h1.withConfig({
-  componentId: "jlfqn3-0"
-})(["", " ", " ", ""], Color, HeadingLarge, Normal);
-const PageTitle =
-/*#__PURE__*/
-styled.h2.withConfig({
-  componentId: "jlfqn3-1"
-})(["", " ", " ", ""], Color, Normal, HeadingMedium);
-const SectionTitle =
-/*#__PURE__*/
-styled.h3.withConfig({
-  componentId: "jlfqn3-2"
-})(["", " ", " ", ""], Color, Normal, HeadingSmall);
-const Text =
-/*#__PURE__*/
-styled.p.withConfig({
-  componentId: "jlfqn3-3"
-})(["", " ", " ", ""], Color, Normal, BodyRegular);
-const SubText =
-/*#__PURE__*/
-styled.p.withConfig({
-  componentId: "jlfqn3-4"
-})(["", " ", " ", ""], Color, Normal, BodySmall);
-export { BrandTitle, PageTitle, SectionTitle, Text, SubText };
+import typographyStyles from './typographyStyles';
+const base = /*#__PURE__*/css(["font-family:Raleway,'Open Sans',sans-serif;font-weight:300;"]);
+const Color = /*#__PURE__*/css(["color:", ";"], props => props.theme.secondary);
+
+function fontSize(size) {
+  return `
+    font-size: ${size}px;
+    line-height: ${1.5 * size}px;
+  `;
+}
+
+const typographyCss = size => css(["", " ", " ", ""], base, Color, fontSize(size));
+
+const elements = Object.entries(typographyStyles).reduce((acc, [name, {
+  element,
+  size
+}]) => {
+  acc[name] = styled[element].withConfig({
+    componentId: "jlfqn3-0"
+  })(["", ""], typographyCss(size));
+  return acc;
+}, {});
+export default elements;
