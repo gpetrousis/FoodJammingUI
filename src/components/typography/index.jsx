@@ -1,46 +1,33 @@
 import styled, { css } from 'styled-components';
+import typographyStyles from './typographyStyles';
 
-import { Normal } from './Styles';
-import { HeadingLarge, HeadingMedium, HeadingSmall, BodyRegular, BodySmall } from './Sizes';
+const base = css`
+  font-family: Raleway, 'Open Sans', sans-serif;
+  font-weight: 300;
+`;
 
 const Color = css`
-  color: ${props => props.theme.fontColorMain};
+  color: ${props => props.theme.secondary};
 `;
 
-const BrandTitle = styled.h1`
+function fontSize(size) {
+  return `
+    font-size: ${size}px;
+    line-height: ${1.5 * size}px;
+  `;
+}
+
+const typographyCss = size => css`
+  ${base}
   ${Color}
-  ${HeadingLarge}
-  ${Normal}
+  ${fontSize(size)}
 `;
 
-const PageTitle = styled.h2`
-  ${Color}
-  ${Normal}
-  ${HeadingMedium}
-`;
+const elements = Object.entries(typographyStyles).reduce((acc, [name, { element, size } ]) => {
+    acc[name] = styled[element]`
+      ${typographyCss(size)}
+    `;
+    return acc;
+  }, {});
 
-const SectionTitle = styled.h3`
-  ${Color}
-  ${Normal}
-  ${HeadingSmall}
-`;
-
-const Text = styled.p`
-  ${Color}
-  ${Normal}
-  ${BodyRegular}
-`;
-
-const SubText = styled.p`
-  ${Color}
-  ${Normal}
-  ${BodySmall}
-`;
-
-export {
-  BrandTitle,
-  PageTitle,
-  SectionTitle,
-  Text,
-  SubText
-};
+export default elements;
