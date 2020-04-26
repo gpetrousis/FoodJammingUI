@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { Text } from '../../components/typography';
+import Typography from '../../components/typography';
+
+const { Heading3 } = Typography;
 
 const Item = styled.div`
   display: flex;
@@ -27,15 +29,18 @@ const DescriptionDiv = styled.div`
 class TypographyItem extends Component {
   render() {
     const {
-      item: { Element, name, description }
+      name,
+      Element,
+      properties: { description, fontSize }
      } = this.props;
+    const elementName = `${name} (${fontSize}/${1.5*fontSize})`;
     return (
       <Item>
         <TextDiv>
-          <Element>{name}</Element>
+          <Element>{elementName}</Element>
         </TextDiv>
         <DescriptionDiv>
-          <Text>{description}</Text>
+          <Heading3>{description}</Heading3>
         </DescriptionDiv>
       </Item>
     );
@@ -43,11 +48,11 @@ class TypographyItem extends Component {
 }
 
 TypographyItem.propTypes = {
-  item: PropTypes.shape({
-    name: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  Element: PropTypes.element.isRequired,
+  properties: PropTypes.shape({
     description: PropTypes.string,
-    example: PropTypes.string,
-    Element: PropTypes.element
+    fontSize: PropTypes.number
   }).isRequired
 };
 

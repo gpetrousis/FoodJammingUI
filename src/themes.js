@@ -1,16 +1,18 @@
 'use strict';
 
-const lightTheme = {
-  fontColorMain: '#232222',
-  colorMain: 'white'
+const light = {
+  primary: '#C4C4C4',
+  secondary: '#404040',
+  tertiary: '#F0F0F0'
 };
 
-const darkTheme = {
-  fontColorMain: '#F2F2F2',
-  colorMain: '#303030'
+const dark = {
+  primary: '#404040',
+  secondary: '#F0F0F0',
+  tertiary: '#C5C5C5'
 };
 
-module.exports = {
-  lightTheme,
-  darkTheme
+export default {
+  light,
+  dark
 };
