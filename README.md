@@ -8,7 +8,7 @@ Ui library for the foodjamming blog
 
 ## Installation
 ```
-npm install npm install --save gpetrousis/FoodJammingUI
+npm install --save gpetrousis/FoodJammingUI
 ```
 
 ## Usage
@@ -39,8 +39,7 @@ Feel free to open a new issue.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-For a detailed guide read [Contribution guidelines for this project](CONTRIBUTING.md)
-
+For a detailed guide read [Contribution guidelines](docs/CONTRIBUTING.md) for this project.
 
 ## Design decisions 
 ### Typography
@@ -64,7 +63,10 @@ The naming of the components is based on existing HTML tags to make things a bit
 simpler.
 
 ## License
-[MIT](LICENCE.md)
+[MIT](LICENCE)
 
 ## References
-- makeareadme.com - This website helped me to make a nice Readme file so I feel like giving some credit.
+- [Make a README](https://www.makeareadme.com) - This website helped me to make a nice Readme file so I feel like giving some credit.
+
+## Status
+The project is on-going on a slow pace as this is my pet project and my playground to get into Frontend Developlent with React. 
